@@ -1,73 +1,653 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="google-site-verification" content="EXTr2Y46tsX0NZg4tzLM0WU7R4n_JyVq3usGly4010g" />
-  <title>Classroom97 Unblocked Games</title> <!-- replace this with the name you want in the browser tab -->
-  <meta name="unblocked games" content="unblocked games" /> <!-- optional but recommended -->
-  <link rel="stylesheet" href="styles.css" /> <!-- if you have a stylesheet -->
-  <link rel="icon" href="/favicon.ico" /> <!-- if you have a favicon -->
-  <!-- other tags you might have: analytics scripts, Open Graph tags, canonical link, etc. -->
-</head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Classroom 97</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classroom97 Games</title>
 
 <style>
-    body {
-        margin: 0;
-        height: 100vh;
-        background: radial-gradient(circle at center, #0a0a0a, #000);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background:
+        radial-gradient(circle at 20% 20%, #321047 0 2px, transparent 3px),
+        radial-gradient(circle at 80% 60%, #321047 0 2px, transparent 3px),
+        linear-gradient(135deg, #16091d, #260b35 50%, #18091f);
+    background-size: 30px 30px, 40px 40px, auto;
+}
+
+/* HEADER */
+
+header {
+    height: 72px;
+    background: #30213b;
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+nav a,
+.dropbtn {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #d9baff;
+}
+
+/* DROPDOWN */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: -20px;
+    top: 30px;
+    width: 180px;
+    background: #3d3455;
+    border-radius: 5px;
+    padding: 10px 0;
+    box-shadow: 0 10px 30px #0008;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 13px 22px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* HERO */
+
+.hero {
+    padding: 45px 7% 30px;
+    background: linear-gradient(
+        180deg,
+        rgba(66, 22, 83, .7),
+        rgba(30, 9, 40, .2)
+    );
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 38px;
+}
+
+.hero p {
+    margin-top: 8px;
+    color: #c9bfd0;
+}
+
+/* SEARCH */
+
+.controls {
+    padding: 20px 7%;
+    display: flex;
+    gap: 12px;
+}
+
+input,
+select {
+    background: #2c1938;
+    color: white;
+    border: 1px solid #563968;
+    border-radius: 8px;
+    padding: 12px 15px;
+    outline: none;
+}
+
+input {
+    width: 300px;
+}
+
+input:focus,
+select:focus {
+    border-color: #9a67bd;
+}
+
+/* GAMES */
+
+.section {
+    padding: 10px 7% 50px;
+}
+
+.section-title {
+    font-size: 22px;
+    margin: 15px 0 20px;
+}
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 22px;
+}
+
+/* CARD */
+
+.game {
+    background: #251330;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #392044;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.game:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px #0009;
+    border-color: #78528d;
+}
+
+.game-image {
+    height: 145px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 55px;
+    overflow: hidden;
+}
+
+/* Different game backgrounds */
+
+.bg1 {
+    background: linear-gradient(135deg, #176be0, #25d985);
+}
+
+.bg2 {
+    background: linear-gradient(135deg, #5c20b9, #d832dd);
+}
+
+.bg3 {
+    background: linear-gradient(135deg, #111827, #5634a7);
+}
+
+.bg4 {
+    background: linear-gradient(135deg, #f22d62, #ff9d30);
+}
+
+.bg5 {
+    background: linear-gradient(135deg, #12a4c7, #5d30c9);
+}
+
+.bg6 {
+    background: linear-gradient(135deg, #f0a400, #d54816);
+}
+
+.game-image::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,.12);
+    transform: rotate(25deg);
+}
+
+.game-info {
+    padding: 14px;
+}
+
+.game-info h3 {
+    margin: 0 0 7px;
+    font-size: 17px;
+}
+
+.category {
+    color: #a99cad;
+    font-size: 13px;
+}
+
+/* EMPTY */
+
+.empty {
+    display: none;
+    padding: 30px 0;
+    color: #aaa;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    color: #76687f;
+    padding: 35px;
+}
+
+/* MOBILE */
+
+@media(max-width: 700px) {
+
+    header {
+        padding: 0 4%;
     }
 
-    .box {
-        text-align: center;
-        color: white;
+    nav {
+        gap: 12px;
+    }
+
+    nav a:nth-child(1) {
+        display: none;
+    }
+
+    .hero,
+    .controls,
+    .section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .games {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .game-image {
+        height: 120px;
     }
 
     input {
-        width: 300px;
-        padding: 12px;
-        font-size: 16px;
-        border: none;
-        outline: none;
-        border-radius: 6px;
-        text-align: center;
+        width: 100%;
     }
-
-    h1 {
-        margin-bottom: 20px;
-        letter-spacing: 3px;
-    }
-
-    .hint {
-        margin-top: 10px;
-        font-size: 12px;
-        color: #888;
-    }
+}
 </style>
 </head>
 
 <body>
 
-<div class="box">
-    <h1>CLASSROOM 97</h1>
-    <input id="entry" type="text" placeholder="Enter to continue..." />
-    <div class="hint">Type anything to enter</div>
+<header>
+
+    <div class="logo">
+        Classroom97
+    </div>
+
+    <nav>
+
+        <a href="#">Home</a>
+        <a href="#games">Games</a>
+        <a href="#popular">Popular</a>
+
+        <div class="dropdown">
+
+            <span class="dropbtn">
+                Categories ▾
+            </span>
+
+            <div class="dropdown-content">
+
+                <a href="#" onclick="filterCategory('All')">
+                    All Games
+                </a>
+
+                <a href="#" onclick="filterCategory('Action')">
+                    Action
+                </a>
+
+                <a href="#" onclick="filterCategory('Arcade')">
+                    Arcade
+                </a>
+
+                <a href="#" onclick="filterCategory('Puzzle')">
+                    Puzzle
+                </a>
+
+                <a href="#" onclick="filterCategory('Racing')">
+                    Racing
+                </a>
+
+                <a href="#" onclick="filterCategory('Sports')">
+                    Sports
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>Game Zone</h1>
+
+    <p>
+        Play games on Classroom97 🎮
+    </p>
+
+</section>
+
+
+<div class="controls">
+
+    <input
+        id="search"
+        type="search"
+        placeholder="🔎 Search games..."
+        oninput="renderGames()"
+    >
+
+    <select
+        id="category"
+        onchange="renderGames()"
+    >
+
+        <option value="All">
+            All Games
+        </option>
+
+        <option value="Action">
+            Action
+        </option>
+
+        <option value="Arcade">
+            Arcade
+        </option>
+
+        <option value="Puzzle">
+            Puzzle
+        </option>
+
+        <option value="Racing">
+            Racing
+        </option>
+
+        <option value="Sports">
+            Sports
+        </option>
+
+    </select>
+
 </div>
 
-<script>
-    const input = document.getElementById("entry");
 
-    input.addEventListener("input", () => {
-        if (input.value.trim().length > 0) {
-            window.location.href = "https://sites.google.com/view/classroom97";
-        }
+<section class="section" id="games">
+
+    <h2 class="section-title" id="popular">
+        🔥 Popular Games
+    </h2>
+
+    <div class="games" id="gameGrid"></div>
+
+    <div class="empty" id="empty">
+        No games found.
+    </div>
+
+</section>
+
+
+<footer>
+    Classroom97 • Game Zone
+</footer>
+
+
+<script>
+
+/*
+==========================================
+ADD YOUR GAMES HERE
+==========================================
+
+For a game stored in your GitHub repo:
+
+url: "games/slope/index.html"
+
+For another website:
+
+url: "https://example.com/game"
+
+*/
+
+const games = [
+
+    {
+        name: "Stickman Hook",
+        category: "Arcade",
+        icon: "🪝",
+        background: "bg1",
+        url: "#"
+    },
+
+    {
+        name: "Slope",
+        category: "Racing",
+        icon: "🟣",
+        background: "bg2",
+        url: "#"
+    },
+
+    {
+        name: "Drift Boss",
+        category: "Racing",
+        icon: "🏎️",
+        background: "bg3",
+        url: "#"
+    },
+
+    {
+        name: "Basket Random",
+        category: "Sports",
+        icon: "🏀",
+        background: "bg4",
+        url: "#"
+    },
+
+    {
+        name: "Fireboy & Watergirl",
+        category: "Puzzle",
+        icon: "🔥",
+        background: "bg5",
+        url: "#"
+    },
+
+    {
+        name: "Run 3",
+        category: "Arcade",
+        icon: "🏃",
+        background: "bg6",
+        url: "#"
+    },
+
+    {
+        name: "Geometry Dash",
+        category: "Arcade",
+        icon: "🔺",
+        background: "bg2",
+        url: "#"
+    },
+
+    {
+        name: "Moto X3M",
+        category: "Racing",
+        icon: "🏍️",
+        background: "bg3",
+        url: "#"
+    },
+
+    {
+        name: "Boxing Random",
+        category: "Sports",
+        icon: "🥊",
+        background: "bg4",
+        url: "#"
+    },
+
+    {
+        name: "Retro Bowl",
+        category: "Sports",
+        icon: "🏈",
+        background: "bg1",
+        url: "#"
+    },
+
+    {
+        name: "2048",
+        category: "Puzzle",
+        icon: "🔢",
+        background: "bg5",
+        url: "#"
+    },
+
+    {
+        name: "Action Game",
+        category: "Action",
+        icon: "⚔️",
+        background: "bg6",
+        url: "#"
+    }
+
+];
+
+
+function renderGames() {
+
+    const grid =
+        document.getElementById("gameGrid");
+
+    const search =
+        document
+        .getElementById("search")
+        .value
+        .toLowerCase();
+
+    const category =
+        document
+        .getElementById("category")
+        .value;
+
+    const filtered =
+        games.filter(game => {
+
+            const matchesSearch =
+                game.name
+                .toLowerCase()
+                .includes(search);
+
+            const matchesCategory =
+                category === "All" ||
+                game.category === category;
+
+            return matchesSearch &&
+                   matchesCategory;
+
+        });
+
+
+    grid.innerHTML = "";
+
+
+    filtered.forEach(game => {
+
+        const card =
+            document.createElement("div");
+
+        card.className = "game";
+
+
+        card.innerHTML = `
+
+            <div class="game-image ${game.background}">
+                ${game.icon}
+            </div>
+
+            <div class="game-info">
+
+                <h3>
+                    ${game.name}
+                </h3>
+
+                <div class="category">
+                    ${game.category}
+                </div>
+
+            </div>
+
+        `;
+
+
+        card.onclick = () => {
+
+            if (game.url !== "#") {
+
+                window.location.href =
+                    game.url;
+
+            } else {
+
+                alert(
+                    "This game hasn't been added yet!"
+                );
+
+            }
+
+        };
+
+
+        grid.appendChild(card);
+
     });
+
+
+    document.getElementById("empty")
+        .style.display =
+        filtered.length === 0
+        ? "block"
+        : "none";
+
+}
+
+
+function filterCategory(category) {
+
+    document
+        .getElementById("category")
+        .value = category;
+
+    renderGames();
+
+    document
+        .getElementById("games")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+renderGames();
+
 </script>
 
 </body>
